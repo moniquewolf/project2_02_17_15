@@ -3,6 +3,7 @@
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Quicksand' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -22,12 +23,15 @@
 		<li>About</li>
 	</ul>
 
+<!-- this add my social media links -->
 	<ul>
        <li class="category">Social</li>
        <li><a href="http://instagram.com/moniquewolf">Instagram</a></li>
        <li><a href="https://github.com/moniquewolf">Github</a></li>
        <li><a href="mailto:monique.n.wolf@gmail.com">Email</a></li>
    </ul>
+
+<!-- this adds my admin login buttons -->
 
 <p class="sign_in">Admin Login</p>
     </div>
