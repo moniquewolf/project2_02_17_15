@@ -1,4 +1,5 @@
 <div id="post_content">
+	this adds
 	<h1 class="title">
 		<%= @post.title %>
 	</h1>
@@ -6,7 +7,9 @@
 	<!-- Adds the time the post was created at -->
 	<p class="date">
 		Submitted <%= time_ago_in_words(@post.created_at)%> Ago
+	<!-- this lets you edit the post -->
 		|	<%= link_to 'Edit', edit_post_path(@post) %>
+	<!-- this lets you delete the post -->
 		| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?'} %>
 	</p>
 
