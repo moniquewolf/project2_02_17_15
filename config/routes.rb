@@ -3,10 +3,14 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   root "posts#index"
   resources :users
   resources :sessions
+
+  get '/about', to: 'pages#about'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
