@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
 	def index
+		@current_user = current_user
 		@posts = Post.all.order('created_at DESC')
 	end
 	
 	def new
-    
-         
 			if current_user && current_user.is_admin 
       	@post = Post.new
       else
