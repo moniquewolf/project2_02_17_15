@@ -6,28 +6,28 @@
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Quicksand' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <div id="navbar">
+      <!-- creates a dynamic link_to Blog homepage -->
+      <%= link_to "HOME", root_path %>
+      <!-- creates a dynamic link_to about.html.erb -->
+      <%= link_to "ABOUT", about_path %>
+  </div>
+
+  <div id="logo">
+    <%= link_to root_path do %>
+      <%= image_tag "leloup_logo.png" %>
+    <% end %>
+  </div>
 </head>
+
 <body>
+<!-- this is adding sidebar -->
 
-<!-- this is adding our sidebar and logo -->
-<div id="sidebar">
-	<div id="logo">
-		<%= link_to root_path do %>
-			<%= image_tag "leloup_logo.png" %>
-		<% end %>
-	</div>
-
-	<ul> 
-		<li class="category">le loup</li>
-    <!-- creates a dynamic link_to Blog homepage -->
-		<li><%= link_to "Blog", root_path %></li>
-    <!-- creates a dynamic link_to about.html.erb -->
-		<li><%= link_to "ABOUT", about_path %></li>
-	</ul>
 
 <!-- this add my social media links -->
 
-	<div class="social">
+	<div class="sidebar">
     <a href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
     <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"><%= image_tag "LinkedIn_Icon.png" %></a>
     <a href="https://github.com/moniquewolf"><%= image_tag "Github_Icon.png" %></a>
@@ -37,7 +37,7 @@
 
 <!-- this adds my admin login buttons -->
 
-		<p class="sign_in">Admin Login</p>
+		<!-- <p class="sign_in">Admin Login</p> -->
  	</div>
  
 	<div id="main_content">

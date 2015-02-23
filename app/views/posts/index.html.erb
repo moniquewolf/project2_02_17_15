@@ -5,6 +5,7 @@
     </div>
 <% end %>
 
+<button class="button"><%= link_to "Log Out", controller: "sessions", action: "destroy" %></button>
 
 <% @posts.each do |post| %>
 	<div class="post_wrapper">
@@ -12,3 +13,4 @@
 		<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
 	</div>
 <% end %>
+

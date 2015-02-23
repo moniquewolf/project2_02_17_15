@@ -4,6 +4,11 @@
 		<%= @post.title %>
 	</h1>
 
+	<!-- Adds the body content -->
+	<p class="body">
+	<%= @post.body %>
+	</p>
+
 	<!-- This shows time the post was created at -->
 	<p class="date">
 		Submitted <%= time_ago_in_words(@post.created_at)%> Ago
@@ -16,14 +21,13 @@
 	<!-- this shows the comments -->
 	<div id="comments">
     <h2><%= @post.comments.count %> Comments</h2>
-    <%= render @post.comments %>
+    <%= @post.comments.each do |c| %>
+    <%= c.body %>
+    <% end %>
  
     <h3>Add a comment:</h3>
     <%= render "comments/form" %>
   </div>
 
-	<!-- Adds the body content -->
-	<p class="body">
-	<%= @post.body %>
-	</p>
+	
 </div>
