@@ -17,6 +17,9 @@
 
 @import 'normalize';
 
+//* {
+//	   border: 1px solid red !important;
+//}
 
 /* Don't let iOS and WinMobile mobile-optimize text for you */
 html {
@@ -38,18 +41,32 @@ a {
 
 #logo {
 		width: 40px;
-		position: absolute;
-		right: 3em;
+		position: fixed;
+		left: 3em;
 		top: 3em;
+		z-index:10;
 	}
 
-#sidebar {
+social {
 	width: 250px;
-	position: float right;
+	float: right;
 	left: 0;
 	top: 0;
 	height: 100%;
-	background: #f5f7f9;
+	padding: 7em 0 0 0;
+	border-right: 1px solid #d6dce0;
+		a {
+			height: 20px;
+			width: 20px;
+		}
+}
+
+#sidebar {
+	width: 250px;
+	float: right;
+	left: 0;
+	top: 0;
+	height: 100%;
 	padding: 7em 0 0 0;
 	border-right: 1px solid #d6dce0;
 	
@@ -58,10 +75,9 @@ a {
 		text-align: right;
 		padding-right: 3em;
 		.category {
-			font-weight: 700;
 			font-size: 0.7em;
 			text-transform: uppercase;
-			color: #33acb7;
+			color: #F1DED5;
 		}
 		li {
 			padding: .5em 0;
@@ -113,12 +129,12 @@ a {
 }
 
 #main_content {
-	margin-left: 250px;
+	margin-right: 250px;
 	#header {
 		padding: 1em 3em;
 		border-bottom: 1px solid #d6dce0;
-		background: #f5f7f9;
-		color: #9eafba;
+		
+		
 		p {
 			display: inline;
 		}
@@ -136,7 +152,7 @@ a {
 		}
 	}
 	.post_wrapper {
-		padding: 3em;
+		padding: 0;
 		border-bottom: 1px solid #d6dce0;
 		.title {
 			margin: 0;
@@ -156,11 +172,11 @@ a {
 		}
 	}
 	#post_content {
-		padding: 1em 3em;
+		padding: 100 0 0 0;
 		.title {
 			font-weight: 500;
 			text-decoration: none;
-			color: #2a2f35;
+			color: #e5d5ce;
 			font-size: 2.5em;
 			margin-bottom: 0;
 		}
