@@ -3,36 +3,52 @@
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Quicksand' %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Quicksand:300,400' %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <div id="navbar">
+  <div class="navbar">
+      <%= link_to "SIGNUP", root_path %>
       <!-- creates a dynamic link_to Blog homepage -->
       <%= link_to "HOME", root_path %>
       <!-- creates a dynamic link_to about.html.erb -->
       <%= link_to "ABOUT", about_path %>
+      <!-- creates a dynamic link_to contact.html.erb -->
+      <%= link_to "CONTACT", root_path %>
+        <div id="search">
+        <%= link_to "SEARCH", root_path %>
+        </div>
   </div>
 
   <div id="logo">
     <%= link_to root_path do %>
-      <%= image_tag "leloup_logo.png" %>
+      <%= image_tag "veda_logo.png" %>
     <% end %>
   </div>
 </head>
 
 <body>
 <!-- this is adding sidebar -->
-
-
-<!-- this add my social media links -->
-
 	<div class="sidebar">
-    <a href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
-    <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"><%= image_tag "LinkedIn_Icon.png" %></a>
-    <a href="https://github.com/moniquewolf"><%= image_tag "Github_Icon.png" %></a>
-    <a href="https://www.facebook.com/monique.wolf.14"><%= image_tag "FB_Icon.png" %></a>
-    <a href="mailto:monique.n.wolf@gmail.com"><%= image_tag "Email_Icon.png" %></a>
+    <h3>SUBSTITUTIONS</h3>
+    <hr>
+    <h3>RECIPES</h3>
+    <hr>
+    <h4>VEDA, an ayurveda- based food blog
+      <br> 
+      provides ingredient substitutions to
+      <br>
+      keep you in balance.
+    </h4>
+    <hr>
+    <!-- this add my social media links -->
+    <a id="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag "FB_Icon.png" %></a>
+    <a id="icons" href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
+    <a id="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag "Email_Icon.png" %></a>
+
+
   </div>
 
 <!-- this adds my admin login buttons -->
@@ -43,7 +59,6 @@
 	<div id="main_content">
    	<div id="header">
     <% if current_page?(root_path) %>
-    <p>All Posts</p>
   <% elsif current_page?(about_path) %>
     <p>About</p>
   <% else %>

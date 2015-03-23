@@ -16,10 +16,15 @@
 
 
 @import 'normalize';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 
-//* {
-//	   border: 1px solid red !important;
-//}
+/** {
+   border: 1px solid red !important;
+}
+*/
+
+
 
 /* Don't let iOS and WinMobile mobile-optimize text for you */
 html {
@@ -27,40 +32,121 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
+.background{
+	background-color: green;
+}
+
+/*navigation/header--------------------------------------------------------------*/
+
+/*this affects home and about links*/
+a:-webkit-any-link {
+  color: #000;
+  text-decoration: none;
+  cursor: auto;
+  margin-right: 2%;
+}
+
+#search{
+	color: #fff;
+}
+
+.navbar{
+	margin-top: 2%;
+	hover: #e2c1b7;
+
+	#search{
+		float: right;
+		background-color: #fff;
+		margin-right: 13%;
+		width: 21em;
+		height: 1.35em;
+		text-align: right;
+
+	}
+
+}
+#logo {
+	margin-top: 8%;
+	margin-bottom: 4%;
+	width: 50%;
+	height: 50%;
+}
+
+background{ 
+	color: #dae4e9;
+}
+
+h1{
+	line-height: 1.2em;
+}
+
+p{
+	line-height: 1.5em;
+}
+
 html, body {
 	font-family: 'Quicksand', sans-serif;
 }
 
-.head {
-	width: 600px;
+/*.head {
+	width: 37.5em;
 	position: absolute;
 	display: block;
+}*/
 
-	#navbar {
+/*body----------------------------------------------------------------------*/
 
-	} 
-	#logo {
-
-	}
+body{
+	margin-left: 13%;
+	background-color: #f3ebe9;
 }
 
-///////////////////////////////////////////////////////////////
+h3 {
+  font-size: 2.1em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  color: #e2c1b7;
+}
+
+h4{
+	font-size: 1.5em;
+	line-height: 1.7em;
+	color: #e2c1b7;
+}
 
 body {
-	#sidebar {
-		width: 250px;
+	.sidebar {
+		width: 228px;
 		float: right;
-		right: 0;
-		top: 0;
+		padding: 0 2% 2%;
 		height: 100%;
-		background: #f5f7f9;
-		padding: 7em 0 0 0;
-		border-right: 1px solid #d6dce0;
+		background: white;	
+		margin-right: 13%;
+		margin-left: 2em;
+		text-align: center;
+
 
 		a {
-		float: right;
-		height: 10px;
-		width: 10px;
+		position: relative;
+		margin-right: 1%;
+		display: inline;
+		}
+
+		img {
+			position: relative;
+			margin: 0 5% 0 5%;
+			width: 10%;
+			height: 10%;
+			padding: 1.3em 0 .25em;
+		}
+
+
+
+		hr {
+			margin-bottom: white solid 1px;
+			color: #e2c1b7;
 		}
 	}
 }
