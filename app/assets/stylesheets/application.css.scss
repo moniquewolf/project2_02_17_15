@@ -46,6 +46,10 @@ a:-webkit-any-link {
   margin-right: 2%;
 }
 
+a{
+	background-color: none;
+}
+
 #search{
 	color: #fff;
 }
@@ -132,6 +136,7 @@ body {
 		position: relative;
 		margin-right: 1%;
 		display: inline;
+		background-color: none;
 		}
 
 		img {
