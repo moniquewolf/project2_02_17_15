@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Post.create(title: 'Strawberry Basil Smoothie', body: '2 cups frozen whole, hulled strawberries, slightly thawed
+1 1/4 cups almond milk
+1 cup firmly packed fresh basil leaves
+2 tablespoons honey
+Pinch of salt Blend strawberries, almond milk, basil, honey, and a pinch of salt in a blender 30 seconds to 1 minute or until smooth.')
