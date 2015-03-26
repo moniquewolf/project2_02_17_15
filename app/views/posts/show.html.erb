@@ -4,10 +4,14 @@
 		<%= @post.title %>
 	</h1>
 
+	<!-- Adds photo -->
+	<div id="photo"  >
+		<%= image_tag @post.photo.url %>
+	</div>
 
 	<!-- Adds the body content -->
 	<p class="body">
-	<%= @post.body %>
+		<%= @post.body %>
 	</p>
 
 	<!-- This shows time the post was created at -->
@@ -29,8 +33,4 @@
     <h1>Add a comment:</h1>
     <%= render "comments/form" %>
   </div>
-
-
-
-	
 </div>
