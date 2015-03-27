@@ -1,13 +1,14 @@
-<div id="post_content">
-	<!-- this adds the post title -->
-	<h1 class="title">
-		<%= @post.title %>
-	</h1>
+<div class="post_content">
 
 	<!-- Adds photo -->
 	<div id="photo" >
 		<%= image_tag @post.photo.url %>
 	</div>
+
+	<!-- this adds the post title -->
+	<h1 class="title">
+		<%= @post.title %>
+	</h1>
 
 	<!-- Adds the body content -->
 	<p class="body">
