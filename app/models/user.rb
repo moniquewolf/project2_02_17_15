@@ -2,7 +2,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
 	has_secure_password
 
-	 has_attached_file :avatar, :styles => { 
+	 has_attached_file :photo, :styles => { 
 
 	 :medium => "300x300>", 
 
