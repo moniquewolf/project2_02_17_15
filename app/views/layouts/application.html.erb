@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Quicksand:300,400' %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %>
@@ -13,96 +13,99 @@
  --></head>
 
 <body>
-  <div class="navbar">
-      <a href="#" class="modal">SIGNUP</a>
-
+  <div class="container">
+    <div class="navbar">
+      <!-- this opens up the modal window on click -->
+      <a id="modal" href="#dialog" class="modalLink">SIGNUP</a>
       <!-- creates a dynamic link_to Blog homepage -->
       <%= link_to "HOME", root_path %>
       <!-- creates a dynamic link_to about.html.erb -->
       <%= link_to "ABOUT", about_path %>
       <!-- creates a dynamic link_to contact.html.erb -->
-      <a id="contact" href="mailto:monique.n.wolf@gmail.com">CONTACT</a>
-        <div id="search">
+      <a class="contact" href="mailto:monique.n.wolf@gmail.com">CONTACT</a>
+      <div class="search">
         <%= link_to "SEARCH", root_path %>
+      </div>
+    </div>
+
+    <div class="logo">
+      <%= link_to root_path do %>
+        <%= image_tag "veda_logo.png" %>
+      <% end %>
+    </div>
+
+  <!--   <div id="modal">
+      <div id="dialog" class="window">
+        <div class="contents">
+            <h3>join our mailing list</h3>
+            <p>enter your email address below to receive new recipes and news straight to your inbox</p> 
+            <a href="#" class="close">Close</a>
         </div>
+      </div>
   </div>
+   -->
 
-  <div id="logo">
-    <%= link_to root_path do %>
-      <%= image_tag "veda_logo.png" %>
+    <!-- this adds my admin login buttons -->
+
+  	<!-- <p class="sign_in">Admin Login</p> -->
+   
+  	<div class="main_content">
+      <% if current_page?(root_path) %>
+      <% elsif current_page?(about_path) %>
+        <!-- <p>About</p> -->
+      <% else %>
+        <%= link_to "Back to All Posts", root_path %>
     <% end %>
-  </div>
+    </div>
 
 
+  	<%= yield %>
 
-<!-- this is adding sidebar -->
-	<div class="sidebar">
-    <h3>SUBSTITUTIONS</h3>
-    <hr>
-    <h3>RECIPES</h3>
-    <hr>
-    <h4>VEDA, an ayurveda- based food blog
-      <br> 
-      provides ingredient substitutions to
+    <!-- this is adding sidebar -->
+    <div class="sidebar">
+      <h3>SUBSTITUTIONS</h3>
+      <hr>
+      <h3>RECIPES</h3>
+      <hr>
+      <h4>VEDA, an ayurveda- based food blog
+        <br> 
+        provides ingredient substitutions to
+        <br>
+        keep you in balance.
+      </h4>
+      <hr>
+
+      <!-- this add my social media links -->
+      <a class="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag "FB_Icon.png" %></a>
+      <a class="icons" href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
+      <a class="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag "Email_Icon.png" %></a>
+    </div>
+  	</div>
+  </div> <!-- this closes the container -->
+
+  <div id="overlay" class=""></div>
+    <!-- // modal -->
+    <div class="modal hidden" id="about-modal">
+      <div id="close-about">x</div>
+      <div class="modal-title">signup with veda</div>
       <br>
-      keep you in balance.
-    </h4>
-    <hr>
-    <!-- this add my social media links -->
-    <a id="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag "FB_Icon.png" %></a>
-    <a id="icons" href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
-    <a id="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag "Email_Icon.png" %></a>
-  </div>
+      <div class="modal-body">
+        <div id="join">join our mailing list to receive new recipes delivered to your inbox</div>
+      <!-- this is my modal window form -->
+        <div id="modal" class="hidden"> 
+          <br> 
+          <%= form_for InfoEmail.new do |f|  %>
+          <%= f.text_field :email, placeholder: " email address" %>
+          <%= f.submit "submit" %>
+          <% end %> 
+          <br>
+          <% flash.each do |name, msg| %>
+          <%= content_tag(:div, msg, class: "alert") %>
+          <% end %>
+          <br>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
 
-<!-- this adds my admin login buttons -->
-
-		<!-- <p class="sign_in">Admin Login</p> -->
- 
-	<div id="main_content">
-   	<div id="header">
-    <% if current_page?(root_path) %>
-    <% elsif current_page?(about_path) %>
-      <!-- <p>About</p> -->
-    <% else %>
-
-      <%= link_to "Back to All Posts", root_path %>
-  <% end %>
-  </div>
- 
- 
-  	<% flash.each do |name, msg| %>
-  		<%= content_tag(:div, msg, class: "alert") %>
-  	<% end %>
-
-    <!-- <%#= form_for InfoEmail.new do |f|  %>
-      <%#= f.text_field :email %>
-      <%#= f.submit "SUBMIT" %>
-    <%# end %> -->
-
-	   <%= yield %>
-	</div>
-  <script>
-    $(document).ready(function(){
-      $('.modal').modal_box();
-      $('.modal_2').modal_box({
-        title:'Second Title Box',
-        description:'Custom description for box <br/><br/>Quisque sodales odio nec dolor porta sed laoreet mauris pretium. Aenean id mauris ligula, semper pulvinar dolor. Suspendisse rutrum, libero eu condimentum porta, mauris mauris semper augue, ut tempor nunc arcu vel ligula. Quisque orci eros, consequat vel iaculis eget, blandit bibendum est. Morbi ac tellus dui. Nullam eget eros et lectus dignissim placerat. Nulla facilisi. Ut congue posuere vulputate.'
-      });
-      $('.modal_3').modal_box({
-        title: 'Change Title with height',
-        height: '500'
-      });
-      $('.modal_4').modal_box({
-        title: 'Change Title with Width',
-        width: '800'
-      });
-      $('.modal_5').modal_box({
-        title:'Second Title Box',
-        description:'Custom description for box <br/><br/>Quisque sodales odio nec dolor porta sed laoreet mauris pretium. Aenean id mauris ligula, semper pulvinar dolor. Suspendisse rutrum, libero eu condimentum porta, mauris mauris semper augue, ut tempor nunc arcu vel ligula. Quisque orci eros, consequat vel iaculis eget, blandit bibendum est. Morbi ac tellus dui. Nullam eget eros et lectus dignissim placerat. Nulla facilisi. Ut congue posuere vulputate.',
-        height: '500',
-        width: '800'
-      });
-  });
-  </script>
-</body>
+  </body>
 </html>
