@@ -8,9 +8,7 @@
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-<!-- <script src="application.js"></script>
- --></head>
+</head>
 
 <body>
   <div class="container">
@@ -23,89 +21,86 @@
       <%= link_to "ABOUT", about_path %>
       <!-- creates a dynamic link_to contact.html.erb -->
       <a class="contact" href="mailto:monique.n.wolf@gmail.com">CONTACT</a>
-      <div class="search">
-        <%= link_to "SEARCH", root_path %>
-      </div>
+        <div class="search">
+          <%= link_to "SEARCH", root_path %>
+        </div>
     </div>
 
     <div class="logo">
       <%= link_to root_path do %>
-        <%= image_tag "veda_logo.png" %>
+      <%= image_tag "veda_logo.png" %>
       <% end %>
     </div>
 
-  <!--   <div id="modal">
-      <div id="dialog" class="window">
-        <div class="contents">
-            <h3>join our mailing list</h3>
-            <p>enter your email address below to receive new recipes and news straight to your inbox</p> 
-            <a href="#" class="close">Close</a>
-        </div>
-      </div>
-  </div>
-   -->
-
-    <!-- this adds my admin login buttons -->
-
-  	<!-- <p class="sign_in">Admin Login</p> -->
    
   	<div class="main_content">
-      <% if current_page?(root_path) %>
-      <% elsif current_page?(about_path) %>
-        <!-- <p>About</p> -->
-      <% else %>
-        <%= link_to "Back to All Posts", root_path %>
-    <% end %>
+      <div class="column.two-thirds">
+        <div class="post_wrapper">
+          <% if current_page?(root_path) %>
+          <% elsif current_page?(about_path) %>
+            <!-- <p>About</p> -->
+          <% else %>
+            <%= link_to "Back to All Posts", root_path %>
+          <% end %>
+        </div>
+      </div>
     </div>
 
 
-  	<%= yield %>
+
+  </div> <!-- this closes container -->
+
+
+  <%= yield %>
 
     <!-- this is adding sidebar -->
     <div class="sidebar">
-      <h3>SUBSTITUTIONS</h3>
-      <hr>
-      <h3>RECIPES</h3>
-      <hr>
-      <h4>VEDA, an ayurveda- based food blog
-        <br> 
-        provides ingredient substitutions to
-        <br>
-        keep you in balance.
-      </h4>
-      <hr>
+      <div class="row clearfix">
+        <div class="column.third">
+          <h3>SUBSTITUTIONS</h3>
+          <hr>
+          <h3>RECIPES</h3>
+          <hr>
+          <h4>VEDA, an ayurveda- based food blog
+            <br> 
+            provides ingredient substitutions to
+            <br>
+            keep you in balance.
+          </h4>
+          <hr>
+          <!-- this add my social media links -->
+          <a class="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag "FB_Icon.png" %></a>
+          <a class="icons" href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
+          <a class="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag "Email_Icon.png" %></a>
+        </div> <!-- this closes column third -->
+      </div> <!-- this closes clearfix -->
+    </div> <!-- this closes sidebar -->
 
-      <!-- this add my social media links -->
-      <a class="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag "FB_Icon.png" %></a>
-      <a class="icons" href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
-      <a class="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag "Email_Icon.png" %></a>
-    </div>
-  	</div>
-  </div> <!-- this closes the container -->
-
+    
+  <!-- // modal overlay -->
   <div id="overlay" class=""></div>
-    <!-- // modal -->
-    <div class="modal hidden" id="about-modal">
-      <div id="close-about">x</div>
-      <div class="modal-title">signup with veda</div>
-      <br>
-      <div class="modal-body">
-        <div id="join">join our mailing list to receive new recipes delivered to your inbox</div>
-      <!-- this is my modal window form -->
-        <div id="modal" class="hidden"> 
-          <br> 
-          <%= form_for InfoEmail.new do |f|  %>
-          <%= f.text_field :email, placeholder: " email address" %>
-          <%= f.submit "submit" %>
-          <% end %> 
-          <br>
-          <% flash.each do |name, msg| %>
-          <%= content_tag(:div, msg, class: "alert") %>
-          <% end %>
-          <br>
-        </div>
-        <div class="modal-footer"></div>
+  <!-- // modal -->
+  <div class="modal hidden" id="about-modal">
+    <div id="close-about">x</div>
+    <div class="modal-title">signup with veda</div>
+    <br>
+    <div class="modal-body">
+      <div id="join">join our mailing list to receive new recipes delivered to your inbox</div>
+    <!-- this is my modal window form -->
+      <div id="modal" class="hidden"> 
+        <br> 
+        <%= form_for InfoEmail.new do |f|  %>
+        <%= f.text_field :email, placeholder: " email address" %>
+        <%= f.submit "submit" %>
+        <% end %> 
+        <br>
+        <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert") %>
+        <% end %>
+        <br>
       </div>
-
-  </body>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</body>
 </html>

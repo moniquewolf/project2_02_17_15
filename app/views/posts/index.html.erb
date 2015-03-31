@@ -6,16 +6,19 @@
 <% end %>
 
 
-
-<% @posts.each do |post| %>
-	<div class="post_wrapper">
-			<!-- Adds photo -->
-		<div id="photo" >
-			<%= image_tag post.photo.url  %>
-		</div>
-	<h2 class="title"><%= link_to post.title, post%></h2>
-	<!-- <p class="date"><%#= post.created_at.strftime("%B %d, %Y") %></p> -->
+<div class="main_content">
+  <div class="column.two-thirds">
+		<% @posts.each do |post| %>
+			<div class="post_wrapper">
+					<!-- Adds photo -->
+				<div id="photo" >
+					<%= image_tag post.photo.url  %>
+				</div>
+				<h2 class="title"><%= link_to post.title, post%></h2>
+				<!-- <p class="date"><%#= post.created_at.strftime("%B %d, %Y") %></p> -->
+			</div>
 	</div>
-	<br>
+</div>
+<br>
 <% end %>
 
