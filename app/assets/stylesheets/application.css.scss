@@ -109,12 +109,15 @@ html {
 
 /*----------------------------------------------------------------------------------*/
 
+/*container-------------------------------------------------------------------------*/
 .container{
 	margin:0 auto;
-  width: 68.75em;
+  width: 1100px;
 }
 
-/*navigation/header--------------------------------------------------------------*/
+
+
+/*navigation/header-----------------------------------------------------------------*/
 
 /*this affects home and about links*/
 a:-webkit-any-link {
@@ -126,7 +129,7 @@ a:-webkit-any-link {
 
 .navbar {
 	margin: 3% 0;
-	/*hover: #e2c1b7;*/
+	hover: #e2c1b7;
 	font-size: .85em;
 }
 
@@ -156,23 +159,10 @@ p {
 	line-height: 1.5em;
 }
 
-html, body {
+html,body {
 	font-family: 'Quicksand', sans-serif;
-}
+  background-color: #f3ebe9;
 
-/*img {
-	max-width: 100%;
-}*/
-
-
-
-
-/*body------------------------------------------------------------------------------*/
-
-body {
-	margin-left: 10%;
-	margin-right: 10%;
-	background-color: #f3ebe9;
 }
 
 h3 {
@@ -190,16 +180,16 @@ h4 {
 	color: #e2c1b7;
 }
 
-.icons {
-width: 50%;
-height: 50%;
-}
 /*----------------------------------------------------------------------------------*/
 
 
 /*posts-----------------------------------------------------------------------------*/
 
-.column.two-thirds,.post_wrapper,#photo{
+.main_content, .two_thirds {
+  width: 60%;
+}
+
+.photo {
   width: 60%;
 }
 
@@ -210,29 +200,47 @@ height: 50%;
 	margin-top: -.75em; 
 }
 
-/*sidebar------------------------------------------------------------------*/
+h3{
 
-.column.third { 
-  width: 32%; 
 }
 
-.sidebar {
-	width: 14.25em;
-	float: left;
+/*sidebar------------------------------------------------------------------*/
+
+.sidebar_third {
+  /*width: 25%;*/
+  /*float: right;*/
+	width: 275px;
+  height: 480px;
+	position: fixed;
+  top: 245px;
+  bottom: 0;
+  /*right: 10%;
+  left: 10%;*/
 	padding: 0 2% 2%;
-	height: 28.4em;
+	height: 28.2em;
 	background: white;	
 	text-align: center;
 	margin-bottom: 1em;
 }
 
+/*.smedia{
+  width: 100%;
+}*/
 
-a {
+.icons {
+  width: 14%;
+  height: 14%;
+  padding: .7em .7em 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*a {
 position: relative;
 margin-right: 1%;
 display: inline;
 background-color: none;
-}
+}*/
 
 /*.sidebar img {
 	position: relative;
