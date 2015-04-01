@@ -21,9 +21,8 @@
 @media screen and (min-width: 480px){
 	.sidebar_third {
 		clear: both;
-		max-width: 13em;
-		position: absolute;
 	}
+	
 	#search {
 		clear: both;
 	}

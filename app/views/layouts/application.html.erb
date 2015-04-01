@@ -10,6 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 
+
 <body>
   <div class="container">
     <div class="navbar">
@@ -33,18 +34,13 @@
     </div>
 
 
- <%= yield %> 
+  
 
 
   	<div class="main_content">
       <div class="two-thirds">
         <!-- <div class="post_wrapper"> -->
-          <% if current_page?(root_path) %>
-          <% elsif current_page?(about_path) %>
-            <!-- <p>About</p> -->
-          <% else %>
-            <%= link_to "Back to All Posts", root_path %>
-          <% end %>
+          
         </div> <!-- this closes two-thirds -->
       </div>
       <!-- this is adding sidebar -->
@@ -66,10 +62,31 @@
             <a class="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag("FB_Icon.png", class: "smedia")  %></a>
             <a class="icons" href="https://instagram.com/moniquewolf"><%= image_tag("Insta_Icon.png", class: "smedia") %></a>
             <a class="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag("Email_Icon.png", class: "smedia") %></a>
+            
+
           </div> <!-- this closes sidebar -->
         <!-- </div> --> <!-- this closes clearfix -->
       <!-- </div> --> <!-- this closes column third -->
+
+      <%= yield %>
     </div> <!-- this closes main content -->
+    <br>
+    <div class="back_bottom">
+    <% if current_page?(root_path) %>
+    <% elsif current_page?(about_path) %>
+      <!-- <p>About</p> -->
+    <% else %>
+      <%= link_to "BACK TO ALL POSTS", root_path %>
+    <% end %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    
+
 
   </div> <!-- this closes container -->
 

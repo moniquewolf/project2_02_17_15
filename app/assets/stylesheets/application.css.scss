@@ -185,12 +185,20 @@ h4 {
 
 /*posts-----------------------------------------------------------------------------*/
 
-.main_content, .two_thirds {
-  width: 60%;
+.main_content{
+  width:100%;
+} 
+
+p.body{
+  width: 68%;
+}
+
+.two_thirds {
+  width: 68%;
 }
 
 .photo {
-  width: 60%;
+  width: 68%;
 }
 
 .date {
@@ -203,36 +211,38 @@ h4 {
 h3{
 
 }
+/*----------------------------------------------------------------------------------*/
 
-/*sidebar------------------------------------------------------------------*/
+/*comments--------------------------------------------------------------------------*/
 
-.sidebar_third {
-  /*width: 25%;*/
-  /*float: right;*/
-	width: 275px;
-  height: 480px;
-	position: fixed;
-  top: 245px;
-  bottom: 0;
-  /*right: 10%;
-  left: 10%;*/
-	padding: 0 2% 2%;
-	height: 28.2em;
-	background: white;	
-	text-align: center;
-	margin-bottom: 1em;
-}
-
-/*.smedia{
-  width: 100%;
+/*element.style {
+  margin: 0px;
+  width: 836px;
+  height: 111px;
 }*/
 
+/*sidebar---------------------------------------------------------------------------*/
+
+.sidebar_third {
+  width: 14.25em;
+  height: 28.4em;
+  float: right;
+  padding: 1% 2% 2%;
+  background: white;  
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.smedia{
+  width: 100%;
+}
+
 .icons {
-  width: 14%;
-  height: 14%;
-  padding: .7em .7em 0;
+  width: 12%;
+  height: 12%;
+  padding: .7em .7em 0 .7em;
   display: inline-block;
-  vertical-align: middle;
+  position: relative;
 }
 
 /*a {
@@ -254,4 +264,8 @@ hr {
 	margin-bottom: white solid 1px;
 	color: #e2c1b7;
 }
+
+
+
+
 
