@@ -10,6 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 
+
 <body>
   <div class="container">
     <div class="navbar">
@@ -32,49 +33,67 @@
       <% end %>
     </div>
 
-   
-  	<div class="main_content">
-      <div class="column.two-thirds">
-        <div class="post_wrapper">
-          <% if current_page?(root_path) %>
-          <% elsif current_page?(about_path) %>
-            <!-- <p>About</p> -->
-          <% else %>
-            <%= link_to "Back to All Posts", root_path %>
-          <% end %>
-        </div>
-      </div>
-    </div>
 
+  
+
+
+  	<div class="main_content">
+      <div class="two-thirds">
+        <!-- <div class="post_wrapper"> -->
+          
+        </div> <!-- this closes two-thirds -->
+      </div>
+      <!-- this is adding sidebar -->
+      <!-- <div class="column_third"> -->
+        <div class="row clearfix">
+          <div class="sidebar_third">
+            <h3>SUBSTITUTIONS</h3>
+            <hr>
+            <h3>RECIPES</h3>
+            <hr>
+            <h4>VEDA, an ayurveda- based food blog
+              <br> 
+              provides ingredient substitutions to
+              <br>
+              keep you in balance.
+            </h4>
+            <hr>
+            <!-- this add my social media links -->
+            <a class="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag("FB_Icon.png", class: "smedia")  %></a>
+            <a class="icons" href="https://instagram.com/moniquewolf"><%= image_tag("Insta_Icon.png", class: "smedia") %></a>
+            <a class="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag("Email_Icon.png", class: "smedia") %></a>
+            
+
+          </div> <!-- this closes sidebar -->
+        <!-- </div> --> <!-- this closes clearfix -->
+      <!-- </div> --> <!-- this closes column third -->
+
+      <%= yield %>
+    </div> <!-- this closes main content -->
+    <br>
+    <div class="back_bottom">
+    <% if current_page?(root_path) %>
+    <% elsif current_page?(about_path) %>
+      <!-- <p>About</p> -->
+    <% else %>
+      <%= link_to "BACK TO ALL POSTS", root_path %>
+    <% end %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    
 
 
   </div> <!-- this closes container -->
 
 
-  <%= yield %>
+ 
 
-    <!-- this is adding sidebar -->
-    <div class="sidebar">
-      <div class="row clearfix">
-        <div class="column.third">
-          <h3>SUBSTITUTIONS</h3>
-          <hr>
-          <h3>RECIPES</h3>
-          <hr>
-          <h4>VEDA, an ayurveda- based food blog
-            <br> 
-            provides ingredient substitutions to
-            <br>
-            keep you in balance.
-          </h4>
-          <hr>
-          <!-- this add my social media links -->
-          <a class="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag "FB_Icon.png" %></a>
-          <a class="icons" href="https://instagram.com/moniquewolf"><%= image_tag "Insta_Icon.png" %></a>
-          <a class="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag "Email_Icon.png" %></a>
-        </div> <!-- this closes column third -->
-      </div> <!-- this closes clearfix -->
-    </div> <!-- this closes sidebar -->
+    
 
     
   <!-- // modal overlay -->

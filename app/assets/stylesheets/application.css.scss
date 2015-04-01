@@ -109,12 +109,15 @@ html {
 
 /*----------------------------------------------------------------------------------*/
 
+/*container-------------------------------------------------------------------------*/
 .container{
 	margin:0 auto;
-  width: 68.75em;
+  width: 1100px;
 }
 
-/*navigation/header--------------------------------------------------------------*/
+
+
+/*navigation/header-----------------------------------------------------------------*/
 
 /*this affects home and about links*/
 a:-webkit-any-link {
@@ -126,7 +129,7 @@ a:-webkit-any-link {
 
 .navbar {
 	margin: 3% 0;
-	/*hover: #e2c1b7;*/
+	hover: #e2c1b7;
 	font-size: .85em;
 }
 
@@ -156,23 +159,10 @@ p {
 	line-height: 1.5em;
 }
 
-html, body {
+html,body {
 	font-family: 'Quicksand', sans-serif;
-}
+  background-color: #f3ebe9;
 
-/*img {
-	max-width: 100%;
-}*/
-
-
-
-
-/*body------------------------------------------------------------------------------*/
-
-body {
-	margin-left: 10%;
-	margin-right: 10%;
-	background-color: #f3ebe9;
 }
 
 h3 {
@@ -190,17 +180,25 @@ h4 {
 	color: #e2c1b7;
 }
 
-.icons {
-width: 50%;
-height: 50%;
-}
 /*----------------------------------------------------------------------------------*/
 
 
 /*posts-----------------------------------------------------------------------------*/
 
-.column.two-thirds,.post_wrapper,#photo{
-  width: 60%;
+.main_content{
+  width:100%;
+} 
+
+p.body{
+  width: 68%;
+}
+
+.two_thirds {
+  width: 68%;
+}
+
+.photo {
+  width: 68%;
 }
 
 .date {
@@ -210,29 +208,49 @@ height: 50%;
 	margin-top: -.75em; 
 }
 
-/*sidebar------------------------------------------------------------------*/
+h3{
 
-.column.third { 
-  width: 32%; 
+}
+/*----------------------------------------------------------------------------------*/
+
+/*comments--------------------------------------------------------------------------*/
+
+/*element.style {
+  margin: 0px;
+  width: 836px;
+  height: 111px;
+}*/
+
+/*sidebar---------------------------------------------------------------------------*/
+
+.sidebar_third {
+  width: 14.25em;
+  height: 28.4em;
+  float: right;
+  padding: 1% 2% 2%;
+  background: white;  
+  text-align: center;
+  margin-bottom: 1em;
 }
 
-.sidebar {
-	width: 14.25em;
-	float: left;
-	padding: 0 2% 2%;
-	height: 28.4em;
-	background: white;	
-	text-align: center;
-	margin-bottom: 1em;
+.smedia{
+  width: 100%;
 }
 
+.icons {
+  width: 12%;
+  height: 12%;
+  padding: .7em .7em 0 .7em;
+  display: inline-block;
+  position: relative;
+}
 
-a {
+/*a {
 position: relative;
 margin-right: 1%;
 display: inline;
 background-color: none;
-}
+}*/
 
 /*.sidebar img {
 	position: relative;
@@ -246,4 +264,8 @@ hr {
 	margin-bottom: white solid 1px;
 	color: #e2c1b7;
 }
+
+
+
+
 

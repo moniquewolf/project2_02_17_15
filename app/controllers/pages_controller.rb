@@ -2,10 +2,8 @@ class PagesController < ApplicationController
 	def about
 	end
 
-	def substitutions
-	end
-
-	def recipies
+	def sub
 	end
 	
 end
+	
