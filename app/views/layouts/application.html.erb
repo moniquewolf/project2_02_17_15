@@ -34,13 +34,13 @@
     </div>
 
 
-  
+
 
 
   	<div class="main_content">
       <div class="two-thirds">
         <!-- <div class="post_wrapper"> -->
-          
+
         </div> <!-- this closes two-thirds -->
       </div>
       <!-- this is adding sidebar -->
@@ -52,7 +52,7 @@
             <h3>RECIPES</h3>
             <hr>
             <h4>VEDA, an ayurveda- based food blog
-              <br> 
+              <br>
               provides ingredient substitutions to
               <br>
               keep you in balance.
@@ -62,7 +62,7 @@
             <a class="icons" href="https://www.facebook.com/monique.wolf.14"><%= image_tag("FB_Icon.png", class: "smedia")  %></a>
             <a class="icons" href="https://instagram.com/moniquewolf"><%= image_tag("Insta_Icon.png", class: "smedia") %></a>
             <a class="icons" href="mailto:monique.n.wolf@gmail.com"><%= image_tag("Email_Icon.png", class: "smedia") %></a>
-            
+
 
           </div> <!-- this closes sidebar -->
         <!-- </div> --> <!-- this closes clearfix -->
@@ -85,17 +85,17 @@
     <br>
     <br>
     </div>
-    
+
 
 
   </div> <!-- this closes container -->
 
 
- 
 
-    
 
-    
+
+
+
   <!-- // modal overlay -->
   <div id="overlay" class=""></div>
   <!-- // modal -->
@@ -106,12 +106,12 @@
     <div class="modal-body">
       <div id="join">join our mailing list to receive new recipes delivered to your inbox</div>
     <!-- this is my modal window form -->
-      <div id="modal" class="hidden"> 
-        <br> 
+      <div id="modal" class="hidden">
+        <br>
         <%= form_for InfoEmail.new do |f|  %>
         <%= f.text_field :email, placeholder: " email address" %>
         <%= f.submit "submit" %>
-        <% end %> 
+        <% end %>
         <br>
         <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert") %>

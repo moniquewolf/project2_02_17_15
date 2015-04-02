@@ -31,6 +31,7 @@ gem "paperclip", "~> 4.2"
 # Enable all platform features
 gem 'rails_12factor'
 
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
