@@ -31,7 +31,7 @@ In a large bowl toss together the shredded kale, basil, olive oil, lemon juice a
 
 Then add in the cooked quinoa, avocado, greens and pistachios; toss together gently and serve.', photo: File.new("#{Rails.root}/app/assets/images/quinoaSaladFnl.png"))
 
-Post.create(title: 'Coconut Quinoa Pancakes', body: '(recipe from At Home in the Whole Food Kitchen by Amy Chaplin)  
+Post.create(title: 'Coconut Quinoa Pancakes', body: '(recipe from At Home in the Whole Food Kitchen by Amy Chaplin) 
 Makes ten 4-inch / 10 cm pancakes
 1/2 cup / 85 g uncooked quinoa, soaked for 12 to 24 hours in 1 cup filtered water  1/2 cup / 45 g rolled oats 3/4 cup / 60 g unsweetened desiccated coconut 1 cup /250 ml unsweetened almond milk 1 egg or 1 tsp chia seeds soaked in 1/4 cup filtered water for 15 minutes  2 tbsp melted extra virgin coconut oil (more for cooking)  1/2 tsp ground vanilla 1 tsp baking powder  1/2 tsp cinnamon  zest of 1 lemon
 Drain and rinse quinoa, and place it in an upright blender. Add oats, ¼ cup coconut, almond milk, chia egg (or regular egg), coconut oil, vanilla, baking powder, and cinnamon. Blend on high speed for about 40 seconds or until completely smooth, scraping down sides as necessary. Add remaining coconut and lemon zest and stir with a rubber spatula to combine.
@@ -52,10 +52,10 @@ This is a very light salad, suitable for hot summer days. The zucchini is grille
 3 Chioggia beets
 3 beetroots
 100 g rucola
-50 g Manchego cheese 
+50 g Manchego cheese
 
 Herb & Mustard Dressing
-1/2 cup olive oil 
+1/2 cup olive oil
 4 tbsp white vine vinegar
 1/3 cup fresh herbs
 1 tbsp dijon mustard
@@ -101,12 +101,12 @@ Wash the cucumber and cut lengthwise in half, then thinly slice. Place in a smal
 Rinse the cucumber well in cold water to remove the salt. Now add onion, garlic, chili, honey and vinegar and toss well to combine, use your hands or a wooden spoon.When mixed, place in a glass jar, close the lid and place in the fridge for 1-2 days. Ready to eat.
 
 Sesame Marinated Baby Spinach
-200 g fresh baby spinach 
-1 tbsp toasted sesame oil 
-1 tbsp rice vinegar 
-1 tbsp soy sauce 
-1 tsp honey 
-1 tsp minced garlic 
+200 g fresh baby spinach
+1 tbsp toasted sesame oil
+1 tbsp rice vinegar
+1 tbsp soy sauce
+1 tsp honey
+1 tsp minced garlic
 1 spring onion, very thinlysliced
 
 Rinse the baby spinach and place in medium mixing bowl. Add all ingredients and toss well so every spinach leaf is coated. Leave to marinate for 15 minutes before serving.
