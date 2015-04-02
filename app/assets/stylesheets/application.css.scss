@@ -30,6 +30,79 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
+/*container-------------------------------------------------------------------------*/
+.container{
+  margin:0 auto;
+  width: 1100px;
+}
+
+
+h1 {
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.7em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  color: #e2c1b7;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.7em;
+  color: #e2c1b7;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f3ebe9;
+
+}
+
+
+/*navigation/header-----------------------------------------------------------------*/
+.navbar {
+  margin: 3% 0;
+  font-size: .85em;
+
+}
+
+.navlinks {
+  color: green;
+}
+
+.navlinks:hover {
+  color: #e2c1b7;
+}
+
+
+
+.search {
+  color: #fff;
+  background-color: #fff;
+  width: 20em;
+  height: 1.35em;
+  text-align: right;
+  padding-top: .15em;
+  float: right;
+}
+
+.logo {
+  margin-top: 8%;
+  margin-bottom: 4%;
+  width: 50%;
+  height: 50%;
+}
+
+/*----------------------------------------------------------------------------------*/
+
 /*modal window----------------------------------------------------------------------*/
 .overlay-back {
   position   : fixed;
@@ -46,7 +119,7 @@ html {
   -o-transition: background 0.25s ease-in-out;
 }
 
-.modal {
+#modal {
   position: fixed;
   top: -375px;
   z-index: 1000;
@@ -109,79 +182,6 @@ html {
 
 /*----------------------------------------------------------------------------------*/
 
-/*container-------------------------------------------------------------------------*/
-.container{
-	margin:0 auto;
-  width: 1100px;
-}
-
-
-
-/*navigation/header-----------------------------------------------------------------*/
-
-/*this affects home and about links*/
-a:-webkit-any-link {
-  color: #000;
-  text-decoration: none;
-  cursor: auto;
-  /*margin-right: 2%;*/
-}
-
-.navbar {
-	margin: 3% 0;
-	hover: #e2c1b7;
-	font-size: .85em;
-}
-
-.search {
-	color: #fff;
-	/*font-family: Open Sans, Sans;*/
-	background-color: #fff;
-	width: 20em;
-	height: 1.35em;
-	text-align: right;
-	padding-top: .15em;
-	float: right;
-}
-
-.logo {
-	margin-top: 8%;
-	margin-bottom: 4%;
-	width: 50%;
-	height: 50%;
-}
-
-h1 {
-	line-height: 1.2em;
-}
-
-p {
-	line-height: 1.5em;
-}
-
-html,body {
-	font-family: 'Quicksand', sans-serif;
-  background-color: #f3ebe9;
-
-}
-
-h3 {
-  font-size: 1.7em;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  color: #e2c1b7;
-}
-
-h4 {
-	font-size: 1.2em;
-	line-height: 1.7em;
-	color: #e2c1b7;
-}
-
-/*----------------------------------------------------------------------------------*/
-
 
 /*posts-----------------------------------------------------------------------------*/
 
@@ -208,9 +208,7 @@ p.body{
 	margin-top: -.75em;
 }
 
-h3{
 
-}
 /*----------------------------------------------------------------------------------*/
 
 /*comments--------------------------------------------------------------------------*/
@@ -245,12 +243,6 @@ h3{
   position: relative;
 }
 
-/*a {
-position: relative;
-margin-right: 1%;
-display: inline;
-background-color: none;
-}*/
 
 /*.sidebar img {
 	position: relative;
@@ -259,8 +251,3 @@ background-color: none;
 	height: 10%;
 	padding: 1.3em 0 .25em;
 }*/
-
-hr {
-	margin-bottom: white solid 1px;
-	color: #e2c1b7;
-}
