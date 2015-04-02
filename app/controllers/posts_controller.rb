@@ -1,7 +1,20 @@
 class PostsController < ApplicationController
 	def index
 		@current_user = current_user
-		@posts = Post.all.order('created_at DESC')
+		# @posts = Post.all.order('created_at DESC')
+
+		#limited search for one column
+    if params[:search].present?
+      @posts = Post.where("body ilike ?", "%#{params[:search]}%")
+    else
+      @posts = Post.all.order('created_at DESC')
+    end
+
+    respond_to do |format|
+    	format.html{}
+    	format.json{ render json: @posts.map(&:body)}
+    end
+
 	end
 	
 	def new

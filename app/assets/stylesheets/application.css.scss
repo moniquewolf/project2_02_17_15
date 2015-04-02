@@ -41,13 +41,18 @@ h1 {
   line-height: 1.2em;
 }
 
-h3 {
-  font-size: 1.7em;
-  -webkit-margin-before: 1em;
+h3 a {
+  font-size: 1.25em;
+/*  -webkit-margin-before: 1em;
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
+  -webkit-margin-end: 0px;*/
   color: #e2c1b7;
+  text-decoration: none;
+}
+
+h3 a:hover{
+  color: #b7b7b7;
 }
 
 h4 {
@@ -69,22 +74,37 @@ body {
 
 /*navigation/header-----------------------------------------------------------------*/
 .navbar {
-  margin: 3% 0;
+  margin: 3% 0 0 0;
   font-size: .85em;
 
 }
 
 .navlinks {
-  color: green;
+  color: #000;
+  text-decoration: none;
+  padding: 1em;
 }
 
-.navlinks:hover {
+.navlinks:hover,.contact:hover {
   color: #e2c1b7;
 }
 
+.contact {
+  color: #000;
+  text-decoration: none;
+  padding: 1em;
+}
 
+#posts {
+  text-align: right;
+  width: 20em;
+  float: right;
+  border: none;
+  font-size: .85em;
+  margin-top: -1.35em;
+}
 
-.search {
+/*.searchbar {
   color: #fff;
   background-color: #fff;
   width: 20em;
@@ -92,7 +112,7 @@ body {
   text-align: right;
   padding-top: .15em;
   float: right;
-}
+}*/
 
 .logo {
   margin-top: 8%;

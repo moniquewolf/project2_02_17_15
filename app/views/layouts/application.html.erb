@@ -15,17 +15,28 @@
   <div class="container">
     <div class="navbar">
       <!-- this opens up the modal window on click -->
-      <a id="modal" href="#dialog" class="modalLink">SIGNUP</a>
+      <a id="modal-link" href="#dialog" >SIGNUP</a>
       <!-- creates a dynamic link_to Blog homepage -->
       <%= link_to "HOME", root_path, class: 'navlinks' %>
       <!-- creates a dynamic link_to about.html.erb -->
       <%= link_to "ABOUT", about_path, class: 'navlinks' %>
       <!-- creates a dynamic link_to contact.html.erb -->
       <a class="contact" href="mailto:monique.n.wolf@gmail.com">CONTACT</a>
-        <div class="search">
-          <%= link_to "SEARCH", root_path %>
-        </div>
+       <!--  <div class="search">
+          <%#= link_to "SEARCH", root_path %>
+        </div> -->
     </div>
+
+<div class="searchbar" class="ui-widget">
+   <%= form_tag posts_path, :method => :get do %>
+       <%= text_field_tag :search, params[:search], :id=>"posts", :placeholder=>"SEARCH " %>
+       <% submit_tag "Search", :body => nil, :id=>"searchbutton" %>
+   <% end %>
+     </div>
+
+
+
+
 
     <div class="logo">
       <%= link_to root_path do %>
