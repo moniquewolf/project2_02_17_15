@@ -3,7 +3,6 @@
 $( document ).ready(function() {
   $('#modal-link').click(function(){
     $('#overlay').addClass('overlay-back');
-    // $('.content').addClass('blur');
     $('#about-modal').show().css({
       'top' : '15%'
     });

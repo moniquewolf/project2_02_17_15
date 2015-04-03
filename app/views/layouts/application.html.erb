@@ -29,7 +29,7 @@
 
 <div class="searchbar" class="ui-widget">
    <%= form_tag posts_path, :method => :get do %>
-       <%= text_field_tag :search, params[:search], :id=>"posts", :placeholder=>"SEARCH " %>
+       <%= text_field_tag :search, params[:search], :id=>"posts", :placeholder=>"SEARCH" %>
        <% submit_tag "Search", :body => nil, :id=>"searchbutton" %>
    <% end %>
      </div>
@@ -60,10 +60,11 @@
           <div class="sidebar_third">
             <h3>
             <%= link_to "SUBSTITUTIONS", substitutions_path %>
-            <hr>
+              <hr>
             <%= link_to "RECIPES", root_path %>
+              <hr>
             </h3>
-            <hr>
+
             <h4>VEDA, an ayurveda- based food blog
               <br>
               provides ingredient substitutions to
@@ -119,15 +120,15 @@
     <div class="modal-body">
       <div id="join">join our mailing list to receive new recipes delivered to your inbox</div>
     <!-- this is my modal window form -->
-      <div id="modal" class="hidden">
+      <div class="hidden">
         <br>
         <%= form_for InfoEmail.new do |f|  %>
-        <%= f.text_field :email, placeholder: " email address" %>
-        <%= f.submit "submit" %>
+          <%= f.text_field :email, placeholder: " email address" %>
+          <%= f.submit "submit" %>
         <% end %>
         <br>
         <% flash.each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert") %>
+          <%= content_tag(:div, msg, class: "alert") %>
         <% end %>
         <br>
       </div>
