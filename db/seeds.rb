@@ -29,7 +29,7 @@ Ingredients:
 generous pinch of black pepper
 In a large bowl toss together the shredded kale, basil, olive oil, lemon juice and salt + pepper. Massage together for about 3-5 minutes.
 
-Then add in the cooked quinoa, avocado, greens and pistachios; toss together gently and serve.', photo: File.new("#{Rails.root}/app/assets/images/quinoaSaladFNL.png"))
+Then add in the cooked quinoa, avocado, greens and pistachios; toss together gently and serve.', photo: File.new("#{Rails.root}/app/assets/images/photo_quinoasalad.png"))
 
 Post.create(title: 'Coconut Quinoa Pancakes', body: '(recipe from At Home in the Whole Food Kitchen by Amy Chaplin) 
 Makes ten 4-inch / 10 cm pancakes
@@ -39,7 +39,7 @@ Warm a wide cast iron skillet over medium heat; add about 1 teaspoon coconut oil
 These pancakes are best hot off the pan, but they can also be kept warm in a 200ºF / 90°C oven as you cook the whole batch. Serve with Quick Citrus Chia Jam or fresh fruit and a dash of maple syrup.
 Quick Citrus & Chia Jam  5 mandarins or citrus fruits of choice, peeled and most of the white rim discarded  2 tbsp honey or maple syrup (more or less depending on the sweetness of the citrus fruits)  1-2 tbsp chia seeds
 Peel two of the mandarins and chop the slices into small pieces that you place in a small bowl. Cut the remaining mandarins in half and squeeze out all the juice into the bowl. Add honey and chia seeds. Use a fork to whisk until all is combined. Leave in the fridge for a few hours or overnight, whisk once or twice to prevent the chia seeds form forming lumps. The chia seeds will bind the juice into a jam-like consistency. Store in a sealed jar in the fridge for up to 3-5 days.
-', photo: File.new("#{Rails.root}/app/assets/images/coconutpancakesFnl.png"))
+', photo: File.new("#{Rails.root}/app/assets/images/photo_coconutpancakes.png"))
 
 Post.create(title: 'Summer Salad', body:'Beetroot, Zucchini & Apple Salad
 Serves 6 persons
@@ -66,7 +66,7 @@ Preparing the vegetables: Wash the zucchini and cut it in ½ -inch slices. Grill
 
 Preparing The Herb & Mustard Dressing: Put all ingredients in a mixer or blender and mix until you get a smooth sauce. Taste.
 
-Assembling the layers: Place a slice of apple, a slice of beetroot, a slice of grilled zucchini, a slice of Chioggia beet and some rucola leafs on top of each other. Repeat three more times. Drizzle the Herb & Mustard Dressing, shave some slices of Manchego cheese and top with a couple of roasted macadamia nuts.', photo: File.new("#{Rails.root}/app/assets/images/summer_saladFNL.png"))
+Assembling the layers: Place a slice of apple, a slice of beetroot, a slice of grilled zucchini, a slice of Chioggia beet and some rucola leafs on top of each other. Repeat three more times. Drizzle the Herb & Mustard Dressing, shave some slices of Manchego cheese and top with a couple of roasted macadamia nuts.', photo: File.new("#{Rails.root}/app/assets/images/photo_summersalad.png"))
 
 
 Post.create(title: 'Kimichi Wraps', body: 'If you for some reason haven’t heard of Kimchi before, we recommend that you immediately add it to the list of things you need to try. It is a fermented spicy korean cabbage salad with a very intriguing and wonderful flavor – a kind of pleasantly sour and pungent taste. It is probably the most famous ingredient in the Korean kitchen. It is also one of David’s favorite things to eat – all categories. Apart from its flavor, it also has several health benefits. Day 1
@@ -119,7 +119,7 @@ Coconut & Ginger Mushrooms
 2 tbsp soy sauce
 1/2 lime, juice
 
-Prepare the fresh mushrooms by simply wipe them off with a damp paper towel (do not wash them with water, as they will only absorb the liquid and get mushy when cooked). Slice the mushrooms in large bite-size pieces. In a large frying pan, heat oil or ghee, then add mushrooms.  Add the mushrooms, toss a couple times to coat them in oil. Add ginger, coconut and soy sauce. Cook for a couple minutes, and shake pan and leave to fry gently for 5-7 minutes. When the mushrooms have browned nicely, add a knob of coconut oil or ghee and the lime juice, and toss again so everything is mixed. Ready for serving.', photo: File.new("#{Rails.root}/app/assets/images/kimichi_wrapsFNL.png"))
+Prepare the fresh mushrooms by simply wipe them off with a damp paper towel (do not wash them with water, as they will only absorb the liquid and get mushy when cooked). Slice the mushrooms in large bite-size pieces. In a large frying pan, heat oil or ghee, then add mushrooms.  Add the mushrooms, toss a couple times to coat them in oil. Add ginger, coconut and soy sauce. Cook for a couple minutes, and shake pan and leave to fry gently for 5-7 minutes. When the mushrooms have browned nicely, add a knob of coconut oil or ghee and the lime juice, and toss again so everything is mixed. Ready for serving.', photo: File.new("#{Rails.root}/app/assets/images/photo_kimichiwraps.png"))
 
 
 Post.create(title: 'Avocado Toast & Cilantro Lime Cashew Cream', body: 'Avocado toast – the bestest of all breakfasts. The classic standby, the old faithful. It never disappoints, it never lets you down. And for most of you {I’m assuming so} this avo-toast isn’t a new concept. We’ve all been rockin’ this breakfast, snack, lunch, what have you for a while now and I think it’s safe to say we can all agree that it is pretty much life-changing. CILANTRO LIME CASHEW CREAM
@@ -134,4 +134,4 @@ Ingredients:
 1 teaspoon sea salt
 1/4 teaspoon black pepper
 1 lime, all the juice + zest
-Blend everything together on high until smooth. Store it in an air-tight container, refrigerated, for up to a week.', photo: File.new("#{Rails.root}/app/assets/images/avocado_toastFNL.png"))
+Blend everything together on high until smooth. Store it in an air-tight container, refrigerated, for up to a week.', photo: File.new("#{Rails.root}/app/assets/images/photo_avocadotoast.png"))
