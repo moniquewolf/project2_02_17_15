@@ -39,7 +39,7 @@ Warm a wide cast iron skillet over medium heat; add about 1 teaspoon coconut oil
 These pancakes are best hot off the pan, but they can also be kept warm in a 200ºF / 90°C oven as you cook the whole batch. Serve with Quick Citrus Chia Jam or fresh fruit and a dash of maple syrup.
 Quick Citrus & Chia Jam  5 mandarins or citrus fruits of choice, peeled and most of the white rim discarded  2 tbsp honey or maple syrup (more or less depending on the sweetness of the citrus fruits)  1-2 tbsp chia seeds
 Peel two of the mandarins and chop the slices into small pieces that you place in a small bowl. Cut the remaining mandarins in half and squeeze out all the juice into the bowl. Add honey and chia seeds. Use a fork to whisk until all is combined. Leave in the fridge for a few hours or overnight, whisk once or twice to prevent the chia seeds form forming lumps. The chia seeds will bind the juice into a jam-like consistency. Store in a sealed jar in the fridge for up to 3-5 days.
-', photo: File.new("#{Rails.root}/app/assets/images/coconutpancakesFNL.png"))
+', photo: File.new("#{Rails.root}/app/assets/images/coconutpancakesFnl.png"))
 
 Post.create(title: 'Summer Salad', body:'Beetroot, Zucchini & Apple Salad
 Serves 6 persons
